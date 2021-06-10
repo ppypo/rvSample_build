@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hzn.haylie.lib.EasyPullLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/epl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:max_offset_top="210dp"
+    app:trigger_offset_top="200dp"
+    tools:context="com.hzn.haylie.recyclerview.RecyclerViewActivity">
+    <!-- app:fixed_content_top="true" // READ.ME -->
+
+    <com.hzn.haylie.recyclerview.TransformerView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_type="edge_top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animationCache="@null"
+        app:layout_type="content"
+        tools:listitem="@layout/item_string" />
+
+</com.hzn.haylie.lib.EasyPullLayout>
